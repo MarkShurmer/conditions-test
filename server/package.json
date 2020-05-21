@@ -1,0 +1,17 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Server",
+  "main": "server.ts",
+  "author": "Mark Shurmer",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "scripts": {
+    "dev": "nodemon --experimental-modules src/server.mjs"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
