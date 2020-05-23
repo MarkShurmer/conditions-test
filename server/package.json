@@ -9,7 +9,8 @@
     "express": "^4.17.1"
   },
   "scripts": {
-    "dev": "nodemon --experimental-modules src/server.mjs"
+    "dev": "nodemon --experimental-modules src/server.mjs",
+    "start": "node --experimental-modules src/server.mjs",
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
