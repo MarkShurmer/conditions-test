@@ -1,0 +1,11 @@
+const express = require('express');
+const conditions = require('./conditions.json');
+const cors = require('cors');
+
+const app = express();
+const port = 5000;
+
+app.use(cors());
+app.get('/conditions', (req, res) => res.send(conditions));
+
+app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));

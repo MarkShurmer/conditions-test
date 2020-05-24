@@ -1,18 +1,18 @@
 {
-  "name": "server",
-  "version": "1.0.0",
-  "description": "Server",
-  "main": "server.ts",
-  "author": "Mark Shurmer",
-  "license": "MIT",
-  "dependencies": {
-    "express": "^4.17.1"
-  },
-  "scripts": {
-    "dev": "nodemon --experimental-modules src/server.mjs",
-    "start": "node --experimental-modules src/server.mjs",
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.4"
-  }
+    "name": "server",
+    "version": "1.0.0",
+    "description": "Server",
+    "main": "server.ts",
+    "author": "Mark Shurmer",
+    "license": "MIT",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^4.17.1"
+    },
+    "scripts": {
+        "dev": "nodemon src/server.js"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.4"
+    }
 }

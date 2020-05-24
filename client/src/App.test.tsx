@@ -5,11 +5,11 @@ import { store } from './app/store';
 import App from './App';
 
 test('renders header', () => {
-  render(
-    <Provider store={store}>
-      <App />
-    </Provider>
-  );
+    render(
+        <Provider store={store}>
+            <App />
+        </Provider>,
+    );
 
-  expect(screen.getByRole('heading')).toBeInTheDocument();
+    expect(screen.getByRole('heading')).toBeInTheDocument();
 });
