@@ -2,6 +2,17 @@ import { AppThunk } from '../../app/store';
 import { fetchConditionsStart, fetchConditionsSuccess, fetchConditionsFailure } from './conditions-slice';
 import { Condition } from './condition';
 
+const sortCondition = (lhs: Condition, rhs: Condition) => {
+    if (lhs.label < rhs.label) {
+        return -1;
+    }
+    if (rhs.label === lhs.label) {
+        return 0;
+    }
+
+    return 1;
+};
+
 export const fetchConditions = (): AppThunk => async (dispatch) => {
     let resp;
 
@@ -15,5 +26,5 @@ export const fetchConditions = (): AppThunk => async (dispatch) => {
     }
 
     // all has worked , so send the success
-    dispatch(fetchConditionsSuccess(resp.conditions as Condition[]));
+    dispatch(fetchConditionsSuccess((resp.conditions as Condition[]).sort(sortCondition)));
 };

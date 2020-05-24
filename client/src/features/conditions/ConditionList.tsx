@@ -8,12 +8,22 @@ import { RootState } from '../../app/store';
 
 const styles = createUseStyles({
     conditionList: {
-        display: 'flexbox',
+        display: 'grid',
+        gridTemplateColumns: 'repeat(4, minmax(0, 1fr))',
+        gridAutoRows: 'minmax(20px, auto)',
+        gridGap: '1rem',
         margin: '1rem',
+    },
+    '@media (max-width: 900px)': {
+        conditionList: {
+            gridTemplateColumns: 'repeat(1, minmax(0, 1fr))',
+        },
     },
     errorPanel: {
         backgroundColor: 'red',
         color: 'white',
+        padding: '2rem',
+        margin: '1rem 3rem 1rem 3rem',
     },
 });
 

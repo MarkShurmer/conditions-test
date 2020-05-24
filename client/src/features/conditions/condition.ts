@@ -1,7 +1,7 @@
 export interface Condition {
-    snippet: string;
+    snippet?: string;
     label: string;
     synonyms: string[];
-    keywords: string[];
+    keywords?: string[];
     image?: string;
 }
